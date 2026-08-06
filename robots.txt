@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://astheer.vercel.app/sitemap.xml
