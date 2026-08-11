@@ -529,5 +529,416 @@ setInterval(updateCountdown, 1000);
 
 </script>
 
+
+<!-- WhatsApp Floating Chat -->
+<div class="wa-widget">
+
+    <!-- Chat Box -->
+    <div class="wa-chat-box" id="waChat">
+
+        <div class="wa-header">
+            <div class="wa-brand">
+                <div class="wa-logo">
+                    <svg viewBox="0 0 32 32">
+                        <path fill="white"
+                            d="M19.11 17.23c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.33-1.56-1.49-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.26.18 1.74.11.53-.08 1.59-.65 1.81-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
+                        <path fill="white"
+                            d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.58-1.72A13 13 0 1 0 16 3zm0 23.7c-2.1 0-4.15-.56-5.94-1.63l-.43-.26-3.91 1.02 1.05-3.81-.28-.44A10.7 10.7 0 1 1 16 26.7z"/>
+                    </svg>
+                </div>
+
+                <div>
+                    <strong>Chat with us</strong>
+                    <span><i></i> Usually replies instantly</span>
+                </div>
+            </div>
+
+            <button class="wa-close" onclick="toggleWhatsApp()">×</button>
+        </div>
+
+        <div class="wa-body">
+
+            <div class="wa-message">
+                <small>WELCOME 👋</small>
+                <p>Hi! How can we help you today?</p>
+            </div>
+
+            <div class="wa-message second">
+                <p>Have a question about our experience or sevice?</p>
+            </div>
+
+            <div class="wa-time">
+                Available on WhatsApp
+            </div>
+
+        </div>
+
+        <div class="wa-footer">
+            <a href="https://wa.me/94740411841" target="_blank">
+                <span>Start a conversation</span>
+
+                <div class="wa-send">
+                    <svg viewBox="0 0 24 24">
+                        <path fill="white"
+                            d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                    </svg>
+                </div>
+            </a>
+        </div>
+
+    </div>
+
+
+    <!-- Floating Button -->
+    <button class="wa-floating" onclick="toggleWhatsApp()">
+
+        <span class="wa-pulse"></span>
+
+        <svg viewBox="0 0 32 32">
+            <path fill="white"
+                d="M19.11 17.23c-.27-.14-1.59-.78-1.84-.87-.25-.09-.43-.14-.61.14-.18.27-.7.87-.86 1.05-.16.18-.32.2-.59.07-.27-.14-1.13-.42-2.15-1.34-.79-.7-1.33-1.56-1.49-1.83-.16-.27-.02-.42.12-.56.12-.12.27-.32.41-.48.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.47-.84-2.01-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.48.07-.73.34-.25.27-.95.93-.95 2.27s.98 2.63 1.11 2.81c.14.18 1.93 2.95 4.68 4.14.65.28 1.16.45 1.56.58.66.21 1.26.18 1.74.11.53-.08 1.59-.65 1.81-1.27.23-.62.23-1.15.16-1.27-.07-.11-.25-.18-.52-.32z"/>
+            <path fill="white"
+                d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.58-1.72A13 13 0 1 0 16 3zm0 23.7c-2.1 0-4.15-.56-5.94-1.63l-.43-.26-3.91 1.02 1.05-3.81-.28-.44A10.7 10.7 0 1 1 16 26.7z"/>
+        </svg>
+
+    </button>
+
+</div>
+
+
+<style>
+
+.wa-widget {
+    position: fixed;
+    right: 22px;
+    bottom: 22px;
+    z-index: 99999;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Floating Button */
+.wa-floating {
+    position: relative;
+    width: 62px;
+    height: 62px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #25d366, #10b957);
+    box-shadow:
+        0 10px 30px rgba(0,0,0,.25),
+        0 4px 12px rgba(37,211,102,.35);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s ease;
+}
+
+.wa-floating:hover {
+    transform: translateY(-4px) scale(1.04);
+}
+
+.wa-floating svg {
+    width: 34px;
+    height: 34px;
+}
+
+/* Pulse */
+.wa-pulse {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    border: 2px solid #25d366;
+    animation: waPulse 2s infinite;
+}
+
+@keyframes waPulse {
+    0% {
+        transform: scale(1);
+        opacity: .7;
+    }
+
+    70% {
+        transform: scale(1.45);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+
+/* Chat Box */
+.wa-chat-box {
+    width: 350px;
+    height: 500px;
+    position: absolute;
+    right: 0;
+    bottom: 78px;
+
+    overflow: hidden;
+    border-radius: 24px;
+
+    background: #101714;
+    box-shadow:
+        0 25px 70px rgba(0,0,0,.35),
+        0 5px 20px rgba(0,0,0,.18);
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(20px) scale(.96);
+    transform-origin: bottom right;
+
+    transition: .3s ease;
+}
+
+.wa-chat-box.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) scale(1);
+}
+
+
+/* Header */
+.wa-header {
+    height: 82px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: linear-gradient(135deg, #18b957, #0fa84e);
+    color: white;
+}
+
+.wa-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.wa-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.16);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-logo svg {
+    width: 28px;
+    height: 28px;
+}
+
+.wa-brand strong {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.wa-brand span {
+    display: block;
+    font-size: 11px;
+    opacity: .9;
+}
+
+.wa-brand i {
+    width: 6px;
+    height: 6px;
+    background: #b8ffcf;
+    display: inline-block;
+    border-radius: 50%;
+    margin-right: 4px;
+}
+
+.wa-close {
+    border: none;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+
+    color: white;
+    background: rgba(0,0,0,.15);
+
+    font-size: 25px;
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+.wa-close:hover {
+    background: rgba(0,0,0,.25);
+    transform: rotate(90deg);
+}
+
+
+/* Body */
+.wa-body {
+    height: 318px;
+    padding: 25px 18px;
+
+    background:
+        radial-gradient(
+            circle at 20% 20%,
+            rgba(37,211,102,.07),
+            transparent 35%
+        );
+
+    position: relative;
+}
+
+.wa-message {
+    width: fit-content;
+    max-width: 85%;
+
+    background: #242b28;
+    color: #e9eeeb;
+
+    padding: 14px 17px;
+    border-radius: 6px 18px 18px 18px;
+
+    margin-bottom: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,.12);
+
+    animation: messageIn .5s ease;
+}
+
+.wa-message small {
+    color: #25d366;
+    font-size: 9px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+}
+
+.wa-message p {
+    margin: 5px 0 0;
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.wa-message.second {
+    border-radius: 6px 18px 18px 18px;
+    animation-delay: .1s;
+}
+
+.wa-time {
+    position: absolute;
+    bottom: 15px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #6d7772;
+    font-size: 10px;
+}
+
+@keyframes messageIn {
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Footer */
+.wa-footer {
+    padding: 14px 16px 18px;
+    background: #101714;
+}
+
+.wa-footer a {
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 8px 0 20px;
+
+    border-radius: 18px;
+
+    text-decoration: none;
+
+    color: white;
+
+    background: linear-gradient(135deg, #20d968, #13bd58);
+
+    box-shadow: 0 8px 20px rgba(21,196,88,.25);
+
+    transition: .25s;
+}
+
+.wa-footer a:hover {
+    transform: translateY(-2px);
+}
+
+.wa-footer span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.wa-send {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 14px;
+
+    background: rgba(255,255,255,.18);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wa-send svg {
+    width: 21px;
+}
+
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .wa-widget {
+        right: 14px;
+        bottom: 14px;
+    }
+
+    .wa-chat-box {
+        width: calc(100vw - 28px);
+        height: 480px;
+        bottom: 74px;
+    }
+
+    .wa-floating {
+        width: 58px;
+        height: 58px;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+function toggleWhatsApp() {
+    const chat = document.getElementById("waChat");
+    chat.classList.toggle("active");
+}
+
+</script>
 </body>
 </html>
