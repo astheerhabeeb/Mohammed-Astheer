@@ -971,6 +971,12 @@
   </footer>
 
   <script>
+
+    // பக்கம் லோட் ஆனதும் தலைப்பை வலுக்கட்டாயமாக மாற்றுவதற்கு
+window.addEventListener('DOMContentLoaded', () => {
+    document.title = "Mohammed Astheer HR";
+});
+    
     const loader = document.getElementById("loader");
     window.addEventListener("load", () => setTimeout(() => loader.classList.add("hide"), 650));
 
