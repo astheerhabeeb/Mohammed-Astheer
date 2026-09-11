@@ -10,18 +10,8 @@
   <meta property="og:title" content="Mohammed Astheer HR | Portfolio">
   <meta property="og:description" content="CCTV Technician, Accountant and Media Management professional.">
   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="/Sign.png">
+  <link rel="icon" href="Sign.png">
   <title>Mohammed Astheer HR | Anax</title>
-
-  <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "Mohammed Astheer HR",
-  "alternateName": "Mohammed Astheer",
-  "url": "https://astheer.vercel.app/"
-}
-  </script>
 
   <style>
     :root {
@@ -83,7 +73,7 @@
     }
     .menu{display:none;background:none;border:0;color:white;font-size:24px}
 
-    section{position:relative;padding:110px clamp(20px,7vw,110px)}
+    section{position:relative;padding:96px clamp(20px,7vw,110px)}
     .hero{
       min-height:100vh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;
       gap:35px;padding-top:125px;
@@ -299,28 +289,16 @@
     .external-arrow{color:var(--gold2);font-size:18px}
     .visit-link{display:inline-block;margin-top:14px;color:var(--gold2);font-size:11px;font-weight:700;letter-spacing:.06em}
 
-   
-    @media(max-width:900px){
-      .thoughts-entry-content{align-items:flex-start;flex-direction:column;gap:24px}
-      .thoughts-entry-action{width:100%;justify-content:space-between}
-    }
-    @media(max-width:600px){
-      .thoughts-entry-card{padding:28px 22px}
-      .thoughts-entry-content h3{font-size:31px}
-      .thoughts-entry-content p{font-size:13px}
-    }
-
     @media(max-width:900px){.projects-grid{grid-template-columns:1fr}.stats{max-width:none}}
-    .nested-section{margin-top:65px;padding-top:0}
-    .nested-section .section-head{margin-bottom:35px}
-    .nested-section.original-thoughts{padding-top:0;padding-bottom:0}
+    .nested-section{margin-top:0;padding:96px 0 0}
+    .nested-section .section-head{margin-bottom:48px}
     @media(max-width:900px){
       html,body{width:100%;max-width:100%;overflow-x:hidden}
       main,section,.nested-section{width:100%;max-width:100%;min-width:0}
       .services-grid,.projects-grid,.skills,.experience,.about-grid,.contact{width:100%;min-width:0}
       .project-card,.service,.skill-card,.exp-card,.about-card,.contact-card{min-width:0;max-width:100%}
       .project-info p,.service p,.exp-card p{overflow-wrap:anywhere}
-      .nested-section{margin-top:50px}
+      .nested-section{margin-top:0;padding-top:72px}
     }
     @media(max-width:600px){
       section{width:100%;max-width:100vw}
@@ -350,8 +328,6 @@
       .exp-card{grid-template-columns:50px 1fr;gap:12px}
       .tag{grid-column:2;width:max-content}
       .about-card,.contact-card{padding:25px}
-      .original-thoughts-card{padding:28px 22px}
-      .original-quote{font-size:30px}
       footer{flex-direction:column}
       .whatsapp{width:56px;height:56px;right:17px;bottom:17px}
       .contact-visual{min-height:0}
@@ -514,6 +490,30 @@
     .bank-card-note { margin-top:14px; text-align:center; color:var(--muted); font-size:.75rem; }
     @media (max-width:850px){ .bank-section{grid-template-columns:1fr;} .premium-bank-card{transform:none;} }
     @media (max-width:520px){ .premium-bank-card{padding:22px;border-radius:20px;} .bank-chip{width:48px;height:36px;margin-top:24px;} .bank-number{margin:24px 0 16px;letter-spacing:.1em;} .bank-value{font-size:.7rem;} }
+  
+    /* Final alignment cleanup */
+    main{display:block}
+    main > section + section{margin-top:0}
+    .section-head{margin-bottom:48px}
+    .skills,.feature-grid,.services-grid,.projects-grid,.experience,.contact,.about-grid{align-items:stretch}
+    .skills > .glass,.feature-grid > .glass{height:100%}
+    .services-grid,.projects-grid,.skills,.feature-grid{row-gap:24px}
+    .experience{gap:18px}
+    .contact{gap:24px}
+    .bank-section{gap:32px}
+    @media(max-width:900px){
+      section{padding-top:76px;padding-bottom:76px}
+      .nested-section{padding-top:64px}
+      .section-head{margin-bottom:38px}
+    }
+    @media(max-width:600px){
+      section{padding:68px 20px}
+      .nested-section{padding-top:56px}
+      .section-head{margin-bottom:32px}
+      .services-grid,.projects-grid,.skills,.feature-grid{row-gap:18px}
+      .experience{gap:14px}
+    }
+
   </style>
 
 </head>
@@ -537,7 +537,7 @@
       <a href="#experience">Experience</a>
       <a href="#services">Services</a>
       <a href="#skills">Skills</a>
-      <a href="bank.html">Bank</a>
+      <a href="#bank">Bank</a>
       <div class="mobile-menu-group">
         <strong>Experience</strong>
         <a href="#media-experience">Media Management</a>
@@ -545,10 +545,6 @@
       <div class="mobile-menu-group">
         <strong>Services</strong>
         <a href="#work">Work</a>
-      </div>
-      <div class="mobile-menu-group">
-        <strong>Skills</strong>
-        <a href="#original-thoughts">Original Thoughts</a>
       </div>
       <a href="#bank" class="nav-cta">Contact Me</a>
     </div>
@@ -576,9 +572,9 @@
           <a class="btn btn-dark" href="#bank">Contact Me</a>
         </div>
         <div class="stats">
-          <div class="stat"><strong>3+</strong><span>Professional Areas</span></div>
-          <div class="stat"><strong>2+</strong><span>Years Media Experience</span></div>
+          <div class="stat"><strong>1+</strong><span>Professional Areas</span></div>
           <div class="stat"><strong>1+</strong><span>Year Accounting Experience</span></div>
+          <div class="stat"><strong>2+</strong><span>Years Media Experience</span></div>
         </div>
         <div class="availability-card glass" style="margin-top:18px">
           <span class="dot"></span>
@@ -817,6 +813,12 @@
     </section>
 
     <section id="contact">
+      <div class="section-head reveal">
+        <div class="eyebrow section-eyebrow" data-icon="◆">GET IN TOUCH</div>
+        <h2>Let's work<span class="gold"> together.</span></h2>
+        <div class="goldline"></div>
+        <p>Send E-mail or Whatsapp for quick rensponse.</p>
+      </div>
       <div class="contact">
         <div class="glass contact-visual reveal">
           <div class="email-panel">
