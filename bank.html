@@ -107,6 +107,280 @@ body{
   .actions{margin-top:24px}
   .return{width:100%}
 }
+
+/* Premium bank-card refinement */
+.bank-list{gap:32px}
+.bank-card{
+  padding:38px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 88% 12%,rgba(215,181,109,.10),transparent 28%),
+    linear-gradient(145deg,rgba(31,31,31,.98),rgba(6,6,6,.99) 72%);
+  border:1px solid rgba(215,181,109,.18);
+  box-shadow:
+    0 30px 90px rgba(0,0,0,.52),
+    inset 0 1px rgba(255,255,255,.09),
+    inset 0 0 45px rgba(215,181,109,.025);
+  transition:transform .35s ease,border-color .35s ease,box-shadow .35s ease;
+}
+.bank-card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(215,181,109,.34);
+  box-shadow:
+    0 38px 100px rgba(0,0,0,.62),
+    inset 0 1px rgba(255,255,255,.12),
+    0 0 45px rgba(215,181,109,.045);
+}
+.bank-card:after{height:1px;opacity:.8}
+.bank-logo{
+  width:54px;height:54px;border-radius:16px;
+  background:linear-gradient(145deg,#302b21,#0b0b0b);
+  border:1px solid rgba(215,181,109,.24);
+  box-shadow:inset 0 0 20px rgba(215,181,109,.06),0 8px 25px rgba(0,0,0,.3);
+  font-size:1.05rem;
+}
+.bank-name{font-size:1.3rem}
+.bank-type{color:#858078}
+.grid{gap:12px}
+.item{
+  padding:17px 18px;
+  border-color:rgba(255,255,255,.07);
+  background:linear-gradient(145deg,rgba(255,255,255,.035),rgba(255,255,255,.015));
+  transition:border-color .25s ease,background .25s ease,transform .25s ease;
+}
+.item:hover{
+  border-color:rgba(215,181,109,.2);
+  background:rgba(215,181,109,.035);
+  transform:translateY(-2px);
+}
+.copy-panel{
+  margin-top:22px;
+  padding:19px;
+  border-color:rgba(215,181,109,.25);
+  background:
+    linear-gradient(100deg,rgba(215,181,109,.08),rgba(215,181,109,.025));
+  box-shadow:inset 0 0 25px rgba(215,181,109,.025);
+}
+.copy-button{
+  background:linear-gradient(135deg,#f0cf7b,#b98932);
+  box-shadow:0 8px 22px rgba(215,181,109,.14);
+}
+@media(max-width:650px){
+  .bank-card{padding:22px;border-radius:23px}
+  .bank-logo{width:44px;height:44px}
+  .bank-name{font-size:1.08rem}
+}
+
+
+
+/* ===== New ATM / Banking Card Design ===== */
+.bank-list{
+  gap:26px;
+  max-width:920px;
+  margin:0 auto;
+}
+.bank-card{
+  position:relative;
+  overflow:hidden;
+  padding:0;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:20px;
+  background:#0b0b0b;
+  box-shadow:0 22px 55px rgba(0,0,0,.48);
+  transition:transform .3s ease,box-shadow .3s ease,border-color .3s ease;
+}
+.bank-card:hover{
+  transform:translateY(-3px);
+  border-color:rgba(215,181,109,.28);
+  box-shadow:0 30px 70px rgba(0,0,0,.58);
+}
+.bank-card:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg,rgba(255,255,255,.045),transparent 32%),
+    repeating-linear-gradient(0deg,transparent 0 39px,rgba(255,255,255,.018) 40px);
+  pointer-events:none;
+}
+.bank-card:after{
+  content:"";
+  position:absolute;
+  top:0;left:0;width:100%;height:4px;
+  background:linear-gradient(90deg,#8b6a2b,#f0cf75,#8b6a2b);
+}
+.bank-head{
+  position:relative;
+  z-index:1;
+  margin:0;
+  padding:26px 30px 22px;
+  background:linear-gradient(180deg,#171717,#101010);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.bank-brand{gap:14px}
+.bank-logo{
+  width:50px;height:50px;
+  border-radius:50%;
+  background:#e6c66d;
+  color:#17120a;
+  border:4px solid #292315;
+  outline:1px solid rgba(230,198,109,.55);
+  box-shadow:none;
+  font-size:1rem;
+  font-weight:950;
+}
+.bank-name{
+  font-size:1.22rem;
+  letter-spacing:.01em;
+}
+.bank-type{
+  color:#77736c;
+  letter-spacing:.13em;
+}
+.card-tag{
+  padding:7px 10px;
+  border:1px solid rgba(215,181,109,.20);
+  border-radius:7px;
+  background:rgba(215,181,109,.045);
+  font-size:.58rem;
+}
+.bank-body{
+  position:relative;
+  z-index:1;
+  padding:25px 30px 30px;
+}
+.grid{
+  gap:0;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:14px;
+  overflow:hidden;
+}
+.item{
+  position:relative;
+  border:0;
+  border-right:1px solid rgba(255,255,255,.065);
+  border-bottom:1px solid rgba(255,255,255,.065);
+  border-radius:0;
+  padding:16px 17px;
+  background:#111;
+  transition:background .2s ease;
+}
+.item:nth-child(2n){border-right:0}
+.item:nth-last-child(-n+2){border-bottom:0}
+.item:hover{
+  transform:none;
+  background:#171717;
+  border-color:rgba(255,255,255,.065);
+}
+.item:before{display:none}
+.label{
+  font-size:.57rem;
+  color:#706c65;
+  letter-spacing:.16em;
+}
+.value{
+  font-size:.92rem;
+}
+.copy-panel{
+  margin-top:18px;
+  padding:15px 17px;
+  border-radius:12px;
+  border:1px solid rgba(215,181,109,.17);
+  background:#12110e;
+  box-shadow:none;
+}
+.copy-title{font-size:.9rem}
+.copy-sub{font-size:.7rem}
+.copy-button{
+  padding:11px 15px;
+  border-radius:9px;
+  background:#e3c269;
+  box-shadow:none;
+}
+.copy-button:hover{
+  transform:none;
+  filter:brightness(1.07);
+  box-shadow:0 5px 18px rgba(215,181,109,.14);
+}
+@media(max-width:650px){
+  .bank-card{border-radius:17px}
+  .bank-head{padding:22px 20px 18px}
+  .bank-body{padding:20px}
+  .bank-logo{width:44px;height:44px}
+  .bank-name{font-size:1.05rem}
+  .card-tag{display:none}
+  .grid{grid-template-columns:1fr}
+  .item,
+  .item:nth-child(2n),
+  .item:nth-last-child(-n+2){
+    border-right:0;
+    border-bottom:1px solid rgba(255,255,255,.065);
+  }
+  .item:last-child{border-bottom:0}
+  .copy-panel{padding:15px}
+}
+
+
+/* ===== Refined Premium Gold ===== */
+:root{
+  --gold:#e5bd5a;
+  --gold-light:#f7df91;
+  --gold-dark:#9b7020;
+}
+.eyebrow,
+.card-tag,
+.label{color:var(--gold)}
+.bank-card{
+  border-color:rgba(229,189,90,.16);
+}
+.bank-card:hover{
+  border-color:rgba(229,189,90,.32);
+}
+.bank-card:after{
+  background:linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--gold-dark) 18%,
+    var(--gold-light) 50%,
+    var(--gold-dark) 82%,
+    transparent 100%
+  );
+  box-shadow:0 0 16px rgba(229,189,90,.28);
+}
+.bank-logo{
+  background:linear-gradient(145deg,var(--gold-light),var(--gold) 55%,var(--gold-dark));
+  color:#171208;
+  border-color:#2a2416;
+  outline-color:rgba(229,189,90,.55);
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,.55),
+    inset 0 -4px 8px rgba(94,62,10,.18),
+    0 5px 18px rgba(229,189,90,.10);
+}
+.copy-panel{
+  border-color:rgba(229,189,90,.20);
+  background:
+    linear-gradient(110deg,rgba(229,189,90,.075),rgba(229,189,90,.025));
+}
+.copy-button,
+.return{
+  background:linear-gradient(135deg,var(--gold-light),var(--gold) 55%,var(--gold-dark));
+  color:#100d07;
+  box-shadow:
+    0 7px 20px rgba(229,189,90,.14),
+    inset 0 1px rgba(255,255,255,.45);
+}
+.copy-button:hover,
+.return:hover{
+  filter:brightness(1.06);
+  box-shadow:
+    0 9px 26px rgba(229,189,90,.20),
+    inset 0 1px rgba(255,255,255,.5);
+}
+.value{
+  color:#f3efe5;
+}
+
 </style>
 </head>
 <body>
@@ -129,11 +403,11 @@ body{
             <div class="bank-type">Bank Account Details</div>
           </div>
         </div>
-        <div class="card-tag">01 · Preferred</div>
+        <div class="card-tag">01 · DFCC Account </div>
       </div>
 
       <div class="bank-body">
-        <div class="account-number">1111 2222 3333 4444</div>
+        
 
         <div class="grid">
           <div class="item"><span class="label">Account Name</span><span class="value">Astheer H R M</span></div>
@@ -154,25 +428,59 @@ body{
       </div>
     </article>
 
-    <article class="bank-card" id="amana">
+    <article class="bank-card" id="boc">
+      <div class="bank-head">
+        <div class="bank-brand">
+          <div class="bank-logo" aria-hidden="true">B</div>
+          <div>
+            <div class="bank-name">BOC Bank</div>
+            <div class="bank-type">Bank Account Details</div>
+          </div>
+        </div>
+        <div class="card-tag">02 · BOC Account</div>
+      </div>
+
+      <div class="bank-body">
+        
+
+        <div class="grid">
+          <div class="item"><span class="label">Account Name</span><span class="value">HRM Mohammed Astheer</span></div>
+          <div class="item"><span class="label">Account Number</span><span class="value">97040254</span></div>
+          <div class="item"><span class="label">Bank Name</span><span class="value">BOC Bank</span></div>
+          <div class="item"><span class="label">Branch</span><span class="value">Kalmunai</span></div>
+          <div class="item"><span class="label">Branch Code</span><span class="value">407</span></div>
+          <div class="item"><span class="label">SWIFT / BIC</span><span class="value">BCEYLKLX</span></div>
+        </div>
+
+        <div class="copy-panel">
+          <div>
+            <div class="copy-title">Copy Bank Details</div>
+            <div class="copy-sub">Copies every detail in order, ready to paste.</div>
+          </div>
+          <button class="copy-button" type="button" data-copy="boc">Copy Details</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="bank-card" id="boc">
       <div class="bank-head">
         <div class="bank-brand">
           <div class="bank-logo" aria-hidden="true">A</div>
           <div>
-            <div class="bank-name">Amana Bank</div>
+            <div class="bank-name">AMANA Bank</div>
             <div class="bank-type">Bank Account Details</div>
           </div>
         </div>
-        <div class="card-tag">02 · Bank Account</div>
+        <div class="card-tag">03 · AMANA Account</div>
       </div>
 
       <div class="bank-body">
-        <div class="account-number">1111 2222 3333 4444</div>
+        
 
         <div class="grid">
-          <div class="item"><span class="label">Account Name</span><span class="value">Mohammed Astheer</span></div>
-          <div class="item"><span class="label">Account Number</span><span class="value">000000000000</span></div>
-          <div class="item"><span class="label">Bank Name</span><span class="value">Amana Bank</span></div>
+          <div class="item"><span class="label">Account Name</span><span class="value">HRM Mohammed Astheer</span></div>
+          <div class="item"><span class="label">Account Number</span><span class="value">100631408001</span></div>
+          <div class="item"><span class="label">Bank Name</span><span class="value">AMANA Bank</span></div>
           <div class="item"><span class="label">Branch</span><span class="value">Kalmunai</span></div>
           <div class="item"><span class="label">Branch Code</span><span class="value">006</span></div>
           <div class="item"><span class="label">SWIFT / BIC</span><span class="value">AMNALKLX</span></div>
@@ -183,7 +491,7 @@ body{
             <div class="copy-title">Copy Bank Details</div>
             <div class="copy-sub">Copies every detail in order, ready to paste.</div>
           </div>
-          <button class="copy-button" type="button" data-copy="amana">Copy Details</button>
+          <button class="copy-button" type="button" data-copy="boc">Copy Details</button>
         </div>
       </div>
     </article>
@@ -205,11 +513,11 @@ const bankData = {
     branchCode: "058",
     swift: "DFCCLKLX"
   },
-  amana: {
-    name: "Amana Bank",
+  boc: {
+    name: "BOC Bank",
     accountName: "Mohammed Astheer",
     accountNumber: "000000000000",
-    bankName: "Amana Bank",
+    bankName: "BOC Bank",
     branch: "kalmunai",
     branchCode: "006",
     swift: "AMNALKLX"
