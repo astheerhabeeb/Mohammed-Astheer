@@ -7,18 +7,18 @@
   <meta name="theme-color" content="#080808">
   <meta name="author" content="Mohammed Astheer HR">
   <meta name="keywords" content="Mohammed Astheer HR, Mohammed Astheer, Astheer, Anax, CCTV Technician, CCTV Installation, Accountant, Media Management, Sri Lanka">
-  <meta property="og:title" content="Mohammed Astheer HR | Portfolio">
+  <meta property="og:title" content="Mohammed Astheer | Portfolio">
   <meta property="og:description" content="CCTV Technician, Accountant and Media Management professional.">
   <meta property="og:type" content="website">
   <link rel="icon" type="image/png" href="Sign.png">
-  <title>Mohammed Astheer HR | Anax</title>
+  <title>Mohammed Astheer</title>
 
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Mohammed Astheer HR",
-  "alternateName": "Mohammed Astheer",
+  "name": "Mohammed Astheer",
+  "alternateName": "Mohammed Astheer HR | Anax",
   "url": "https://astheer.vercel.app/"
 }
   </script>
@@ -524,7 +524,693 @@
       .experience{gap:14px}
     }
 
+
+    /* Final spacing + bank card refinement */
+    .contact { gap: 18px; }
+    .contact-visual { min-height: 0; align-items: stretch; }
+    .email-panel { justify-content: flex-start; }
+    .email-card { padding: 28px; }
+    .contact-email-intro { margin: 0 0 4px !important; }
+    .email-form { gap: 10px; margin-top: 16px; }
+    .email-form input, .email-form textarea { padding: 13px 14px; }
+    .email-form textarea { min-height: 110px; }
+    .email-form .btn { margin-top: 2px; }
+    .socials { margin-top: 14px; }
+    #contact .section-head { margin-bottom: 34px; }
+    #contact { padding-bottom: 72px; }
+    #bank { padding-bottom: 72px; }
+    #bank .section-head { margin-bottom: 34px; }
+    .bank-card-wrap { max-width: 760px; margin: 0 auto; }
+    .bank-atm {
+      position: relative; overflow: hidden; min-height: 300px; padding: 30px;
+      border-radius: 26px; border: 1px solid rgba(245,207,104,.28);
+      background: radial-gradient(circle at 82% 18%, rgba(245,207,104,.22), transparent 30%),
+                  linear-gradient(135deg, #17130b, #090909 62%, #14100a);
+      box-shadow: 0 25px 70px rgba(0,0,0,.5), inset 0 0 45px rgba(215,169,61,.05);
+      display:flex; flex-direction:column; justify-content:space-between;
+    }
+    .bank-atm:before { content:""; position:absolute; width:190px; height:190px; border-radius:50%; right:-55px; bottom:-75px; border:1px solid rgba(245,207,104,.14); box-shadow:0 0 0 20px rgba(245,207,104,.025),0 0 0 40px rgba(245,207,104,.018); }
+    .bank-top { display:flex; justify-content:space-between; align-items:flex-start; gap:18px; position:relative; z-index:1; }
+    .bank-chip { width:50px; height:36px; border-radius:8px; border:1px solid rgba(255,255,255,.22); background:linear-gradient(135deg,#b8903a,#f2d477,#9b6d19); box-shadow:inset 0 1px rgba(255,255,255,.4); }
+    .bank-brand { color:#f5cf68; font-weight:800; letter-spacing:.16em; font-size:12px; text-transform:uppercase; }
+    .bank-label { color:#9f988b; font-size:9px; letter-spacing:.2em; text-transform:uppercase; margin-top:4px; }
+    .bank-number { position:relative; z-index:1; font-size:clamp(22px,4vw,31px); letter-spacing:.12em; color:#f7f3e9; font-weight:650; margin:22px 0 18px; font-variant-numeric:tabular-nums; }
+    .bank-bottom { position:relative; z-index:1; display:flex; justify-content:space-between; gap:20px; align-items:flex-end; }
+    .bank-holder { color:#d5cfc3; font-size:13px; text-transform:uppercase; letter-spacing:.1em; }
+    .bank-meta { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin-top:8px; }
+    .bank-meta small { display:block; color:#817b72; font-size:8px; letter-spacing:.16em; text-transform:uppercase; margin-bottom:4px; }
+    .bank-meta strong { color:#eee8dd; font-size:12px; font-weight:600; }
+    .bank-mark { color:#d7a93d; font-size:24px; font-weight:800; letter-spacing:.05em; }
+    @media(max-width:600px){
+      .email-card { padding:22px; }
+      #contact .section-head, #bank .section-head { margin-bottom:26px; }
+      .socials { margin-top:10px; }
+      .bank-atm { min-height:270px; padding:23px; border-radius:22px; }
+      .bank-number { font-size:20px; letter-spacing:.08em; margin:18px 0; }
+      .bank-meta { gap:12px; }
+    }
   </style>
+
+<style id="responsive-layout-final">
+  /* ===== Final responsive width + spacing cleanup ===== */
+  html, body {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: hidden;
+  }
+
+  body {
+    min-height: 100%;
+  }
+
+  main {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    overflow-x: clip;
+  }
+
+  /* Keep the site content inside the actual device/viewport width. */
+  section {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 auto;
+    padding: 64px clamp(16px, 4vw, 64px);
+    overflow-x: clip;
+  }
+
+  section > * {
+    min-width: 0;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  section.hero {
+    max-width: 1600px;
+    padding-top: 110px;
+    padding-bottom: 56px;
+  }
+
+  .hero > * {
+    min-width: 0;
+  }
+
+  .hero-gridline,
+  .floating-orb {
+    max-width: none;
+    margin: 0;
+  }
+
+  .section-head {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 34px;
+  }
+
+  .section-head h2,
+  .section-head p {
+    max-width: 100%;
+  }
+
+  /* Prevent grid children from forcing horizontal scrolling. */
+  .hero,
+  .about-grid,
+  .services-grid,
+  .skills,
+  .feature-grid,
+  .projects-grid,
+  .contact,
+  .bank-section {
+    min-width: 0;
+  }
+
+  .hero {
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    gap: clamp(24px, 3vw, 48px);
+  }
+
+  .about-grid {
+    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  }
+
+  .services-grid,
+  .projects-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .skills,
+  .feature-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .contact {
+    grid-template-columns: minmax(0, 1fr) minmax(0, .85fr);
+  }
+
+  .bank-section {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  }
+
+  .glass,
+  .service,
+  .project-card,
+  .skill-card,
+  .about-card,
+  .contact-card,
+  .contact-visual,
+  .exp-card,
+  .email-card,
+  .availability-card,
+  .bank-atm {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .project-info p,
+  .service p,
+  .exp-card p,
+  .about-card p,
+  .contact-card p,
+  .hero-copy,
+  .learning-note,
+  .skill-pill small,
+  .roadmap-item small {
+    overflow-wrap: anywhere;
+    word-break: normal;
+  }
+
+  .portrait-wrap {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .portrait {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nested-section {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 52px 0 0;
+  }
+
+  /* Remove duplicated / excessive vertical gaps created by nested sections. */
+  section + section {
+    margin-top: 0 !important;
+  }
+
+  .nested-section .section-head {
+    margin-bottom: 28px;
+  }
+
+  footer {
+    width: 100%;
+    max-width: 100%;
+    padding: 28px clamp(16px, 4vw, 64px);
+  }
+
+  /* Tablet */
+  @media (max-width: 1000px) {
+    section {
+      padding-top: 56px;
+      padding-bottom: 56px;
+    }
+
+    section.hero {
+      padding-top: 100px;
+      padding-bottom: 48px;
+    }
+
+    .hero,
+    .about-grid,
+    .contact,
+    .bank-section {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .hero {
+      gap: 18px;
+    }
+
+    .portrait-wrap {
+      order: -1;
+      min-height: 430px;
+    }
+
+    .services-grid,
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skills,
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .nested-section {
+      padding-top: 42px;
+    }
+  }
+
+  /* Phones */
+  @media (max-width: 600px) {
+    section {
+      padding: 46px 16px;
+    }
+
+    section.hero {
+      padding: 92px 16px 42px;
+      min-height: auto;
+    }
+
+    .hero {
+      gap: 12px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 13vw, 56px);
+      line-height: .94;
+      max-width: 100%;
+    }
+
+    .hero-copy {
+      margin: 20px 0;
+      font-size: 15px;
+      line-height: 1.65;
+    }
+
+    .learning-stack {
+      margin: 18px 0 20px;
+      padding: 15px 16px;
+      width: 100%;
+    }
+
+    .learning-line {
+      font-size: 14px;
+    }
+
+    .learning-skills {
+      font-size: 9px;
+      letter-spacing: .11em;
+    }
+
+    .buttons {
+      gap: 9px;
+    }
+
+    .btn {
+      padding: 12px 16px;
+      font-size: 13px;
+      max-width: 100%;
+    }
+
+    .buttons .btn {
+      flex: 1 1 100%;
+      width: 100%;
+    }
+
+    .stats {
+      margin-top: 22px;
+      gap: 8px;
+    }
+
+    .stat {
+      padding: 13px 12px;
+    }
+
+    .availability-card {
+      margin-top: 12px !important;
+      padding: 17px;
+      gap: 12px;
+    }
+
+    .download-cv {
+      margin-top: 10px;
+    }
+
+    .section-head {
+      margin-bottom: 24px;
+    }
+
+    .section-head .section-eyebrow,
+    .contact-card .section-eyebrow {
+      margin-bottom: 15px;
+    }
+
+    .section-head h2,
+    .contact-card h2 {
+      font-size: clamp(32px, 9vw, 46px);
+      line-height: 1;
+    }
+
+    .section-head p {
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .about-grid,
+    .services-grid,
+    .projects-grid,
+    .skills,
+    .feature-grid,
+    .contact,
+    .bank-section {
+      width: 100%;
+      gap: 14px;
+    }
+
+    .about-card,
+    .contact-card,
+    .skill-card,
+    .email-card {
+      padding: 20px;
+    }
+
+    .quote {
+      font-size: 23px;
+    }
+
+    .service {
+      min-height: 0;
+      padding: 22px;
+    }
+
+    .service h3 {
+      font-size: 20px;
+    }
+
+    .experience {
+      gap: 10px;
+    }
+
+    .exp-card {
+      grid-template-columns: 42px minmax(0, 1fr);
+      gap: 10px;
+      padding: 18px;
+    }
+
+    .exp-num {
+      font-size: 28px;
+    }
+
+    .exp-card h3 {
+      font-size: 18px;
+    }
+
+    .tag {
+      grid-column: 2;
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .project-art {
+      height: 155px;
+    }
+
+    .project-info {
+      padding: 19px;
+    }
+
+    .skill-pill {
+      padding: 12px;
+      gap: 10px;
+    }
+
+    .roadmap-item {
+      grid-template-columns: 32px minmax(0, 1fr);
+      padding: 12px;
+    }
+
+    .roadmap-status {
+      grid-column: 2;
+      width: max-content;
+      max-width: 100%;
+    }
+
+    .nested-section {
+      padding: 36px 0 0;
+    }
+
+    .nested-section .section-head {
+      margin-bottom: 22px;
+    }
+
+    .email-form {
+      gap: 9px;
+      margin-top: 13px;
+    }
+
+    .email-form input,
+    .email-form textarea {
+      padding: 12px 13px;
+      font-size: 14px;
+    }
+
+    .email-form textarea {
+      min-height: 100px;
+    }
+
+    .email-actions .btn {
+      width: 100%;
+    }
+
+    .socials {
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .social {
+      width: 38px;
+      height: 38px;
+      flex-basis: 38px;
+    }
+
+    .bank-atm {
+      min-height: 245px;
+      padding: 20px;
+      border-radius: 20px;
+    }
+
+    .bank-number {
+      font-size: 18px;
+      letter-spacing: .06em;
+    }
+
+    .bank-meta {
+      gap: 10px;
+    }
+
+    .bank-value {
+      font-size: 11px;
+    }
+
+    footer {
+      padding: 24px 16px;
+      gap: 8px;
+    }
+
+    .whatsapp {
+      width: 52px;
+      height: 52px;
+      right: 14px;
+      bottom: 14px;
+    }
+
+    .backtop {
+      right: 14px;
+      bottom: 78px;
+    }
+  }
+
+  /* Very small phones */
+  @media (max-width: 380px) {
+    section {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+
+    section.hero {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+
+    h1 {
+      font-size: 40px;
+    }
+
+    .learning-skills {
+      letter-spacing: .06em;
+    }
+
+    .exp-card {
+      padding: 15px;
+    }
+
+    .bank-atm {
+      padding: 17px;
+    }
+  }
+</style>
+
+<style id="requested-final-fixes">
+#home{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+#home .hero{width:100%;max-width:100%;min-width:0;box-sizing:border-box}
+#contact{padding-bottom:0 !important;margin-bottom:0 !important}
+footer{margin-top:0 !important}
+@media (max-width:600px){#home{padding-left:16px;padding-right:16px}#home .hero{width:100%;max-width:100%;grid-template-columns:minmax(0,1fr)}#contact{padding-bottom:0 !important}}
+@media (max-width:380px){#home{padding-left:13px;padding-right:13px}}
+</style>
+
+<style id="home-responsive-width-fix">
+  /* Home section: always use the full available viewport width */
+  #home.hero{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    margin-left:0;
+    margin-right:0;
+    box-sizing:border-box;
+  }
+
+  #home.hero > .reveal{
+    width:100%;
+    max-width:none;
+    min-width:0;
+    margin-left:0;
+    margin-right:0;
+  }
+
+  #home .hero-copy{
+    width:100%;
+    max-width:100%;
+  }
+
+  #home .learning-stack{
+    max-width:100%;
+  }
+
+  @media (max-width:1000px){
+    #home.hero{
+      grid-template-columns:minmax(0,1fr);
+      width:100%;
+    }
+
+    #home.hero > .reveal{
+      width:100%;
+    }
+
+    #home .portrait-wrap{
+      width:100%;
+      max-width:100%;
+      min-width:0;
+    }
+  }
+
+  @media (max-width:600px){
+    #home.hero{
+      width:100%;
+      max-width:100%;
+      padding-left:12px;
+      padding-right:12px;
+    }
+
+    #home.hero > .reveal{
+      width:100%;
+      max-width:100%;
+    }
+
+    #home .hero-copy{
+      width:100%;
+      max-width:100%;
+    }
+
+    #home .learning-stack{
+      width:100%;
+      max-width:100%;
+      box-sizing:border-box;
+    }
+
+    #home .buttons,
+    #home .stats,
+    #home .availability-card{
+      width:100%;
+      max-width:100%;
+    }
+
+    #home .portrait-wrap{
+      width:100%;
+      max-width:100%;
+    }
+
+    #home .portrait{
+      width:min(88vw,360px);
+      max-width:calc(100vw - 30px);
+    }
+
+    #home .hero-badge{
+      right:4px;
+      max-width:calc(100% - 8px);
+    }
+  }
+
+  @media (max-width:380px){
+    #home.hero{
+      padding-left:10px;
+      padding-right:10px;
+    }
+  }
+</style>
+
+
+<style id="desktop-section-alignment">
+  /* Desktop: keep section headings aligned to the left content edge. */
+  @media (min-width: 1001px) {
+    section > .section-head,
+    .nested-section > .section-head {
+      margin-left: 0;
+      margin-right: 0;
+      text-align: left;
+    }
+
+    /* Bank + Get In Touch: two sections visible side-by-side on PC. */
+    .desktop-section-pair {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      align-items: stretch;
+      width: 100%;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    .desktop-section-pair > section {
+      width: 100%;
+      min-width: 0;
+      padding-left: clamp(20px, 4vw, 64px);
+      padding-right: clamp(20px, 4vw, 64px);
+    }
+
+    .desktop-section-pair > section > * {
+      max-width: 100%;
+    }
+
+    .desktop-section-pair .section-head {
+      max-width: 900px;
+    }
+  }
+
+  /* Tablet/phone: keep Bank and Get In Touch stacked vertically. */
+  @media (max-width: 1000px) {
+    .desktop-section-pair {
+      display: block;
+      width: 100%;
+    }
+  }
+</style>
 
 </head>
 
@@ -804,19 +1490,37 @@
       </div>
     </section>
 
-    <section id="bank">
+    <div class="desktop-section-pair">
+<section id="bank">
       <div class="section-head reveal">
         <div class="eyebrow section-eyebrow" data-icon="◆">Bank Details</div>
         <h2>Bank <span class="gold">Details.</span></h2>
         <div class="goldline"></div>
         <p>View the banking information for payments or transfers.</p>
       </div>
-      <div class="glass recommend-card reveal" style="max-width:720px;margin:0 auto;">
-        <div class="recommend-icon">◆</div>
-        <h3>Bank Details</h3>
-        <p>Tap below to view the complete account number, bank name, branch and other banking details.</p>
-        <div style="margin-top:22px;">
-          <a class="btn btn-gold" href="bank.html">View Bank Details →</a>
+      <div class="bank-card-wrap reveal">
+        <div class="bank-atm">
+          <div class="bank-top">
+            <div><div class="bank-brand">Bank Details</div><div class="bank-label">Secure transfer card</div></div>
+            <div class="bank-chip" aria-hidden="true"></div>
+          </div>
+          <div>
+            <div class="bank-label">Account Number</div>
+            <div class="bank-number">1020 0520 0827</div>
+          </div>
+          <div class="bank-bottom">
+            <div>
+              <div class="bank-holder">Mohammed Astheer</div>
+              <div class="bank-meta">
+                <div><small>Bank</small><strong>DFCC</strong></div>
+                <div><small>Branch</small><strong>Kalmunai</strong></div>
+              </div>
+            </div>
+            <div class="bank-mark">ATM</div>
+          </div>
+          <div style="margin-top:20px;position:relative;z-index:1;">
+            <a class="btn btn-gold" href="bank.html">View Full Bank Details →</a>
+          </div>
         </div>
       </div>
     </section>
@@ -853,7 +1557,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+</section>
   </main>
   <a class="backtop" id="backtop" href="#home" aria-label="Back to top">↑</a>
 
